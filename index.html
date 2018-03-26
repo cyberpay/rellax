@@ -73,7 +73,7 @@
           <div class="subtitle">
             <div class="row">
               <div class="col-md-offset-1 col-md-2">
-                <h3>Light (871b gz)</h3>
+                <h3>Light (trust me)</h3>
               </div>
               <div class="col-md-2">
                 <h3>Vanilla Javascript</h3>
@@ -235,7 +235,6 @@
 
 
       <section class="section">
-
         <div class="absolute above" style="pointer-events: none;">
           <div class="container">
             <div class="row">
@@ -313,9 +312,16 @@
     <script>
     	var rellax = new Rellax('.rellax', {
         // center: true
-        callback: function() {
-            // callback every position change
-            console.log( this );
+        callback: function( instance ) {
+            var visiblePercentage = 1,
+                topOffset = instance.blocks[0].node.getBoundingClientRect().top, // pixels which aren't visible anymore
+                parentHeight = instance.blocks[0].node.clientHeight;
+
+                if( topOffset < 0 )
+                  visiblePercentage = (parentHeight + topOffset) / parentHeight + .6;
+
+
+                instance.blocks[0].node.style.filter = `blur(${10 - 10 * visiblePercentage}px)`;
         }
       });
     </script>

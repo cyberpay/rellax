@@ -1,6 +1,6 @@
 # RELLAX
 
-Rellax is a buttery smooth, super lightweight (1021bytes gzipped), vanilla javascript parallax library. **Update:** Rellax now works on mobile (v1.0.0).
+Rellax is a buttery smooth, very lightweight, vanilla javascript parallax library.
 
 ## [See Demos](https://yaireo.github.io/rellax/)
 
@@ -103,13 +103,14 @@ Note that this can work together at the same time with the default vertical para
 ```
 
 ### Callback
+A callback can be set and will be fired on every frame of the animation, and will return the instance (to access its properties)
+
 ```html
 <script>
   // Start Rellax
   var rellax = new Rellax('.rellax-blur-card', {
-    callback: function(positions) {
-      // callback every position change
-      console.log(positions);
+    callback: function( instance ) {
+      console.log( instance );
     }
   });
 </script>

@@ -122,8 +122,8 @@
 
       this.blocks = [];
 
-      this.screen.y = window.innerHeight;
-      this.screen.x = window.innerWidth;
+      this.screen.y = window.innerHeight || document.documentElement.clientHeight;
+      this.screen.x = window.innerWidth  || document.documentElement.clientWidth;
       this.setPosition();
       this.cacheBlocks();
       this.animate();
@@ -184,6 +184,7 @@
       }
 
       return {
+        node      : el,
         baseX     : bases.x,
         baseY     : bases.y,
         top       : blockTop,
@@ -275,7 +276,7 @@
         this.DOM.elements[i].style[transformProp] = translate;
       }
 
-      this.options.callback();
+      this.options.callback( this );
     },
 
     // destroy instance
