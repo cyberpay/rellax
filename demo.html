@@ -308,20 +308,16 @@
 
     </main>
 
-
     <!-- javascript -->
     <script type="text/javascript" src="rellax.js"></script>
     <script>
     	var rellax = new Rellax('.rellax', {
         // center: true
-        callback: function(position) {
+        callback: function() {
             // callback every position change
-            console.log(position);
+            console.log( this );
         }
       });
     </script>
-
-
-
   </body>
 </html>

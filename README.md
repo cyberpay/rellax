@@ -30,11 +30,11 @@ Have any suggestions or feedback? Reach out [@dixonandmoe](https://twitter.com/d
 <script>
   // Also can pass in optional settings block
   var rellax = new Rellax('.rellax', {
-    speed: -2,
-    center: false,
-    round: true,
-    vertical: true,
-    horizontal: false
+    speed      : -2,
+    center     : false,
+    round      : true,
+    vertical   : true,
+    horizontal : false
   });
 </script>
 ```
@@ -44,7 +44,6 @@ Have any suggestions or feedback? Reach out [@dixonandmoe](https://twitter.com/d
 Use the `data-rellax-speed` attribute to set the speed of a `.rellax` element to something other than the default value (which is `-2`). A negative value will make it move slower than regular scrolling, and a positive value will make it move faster. We recommend keeping the speed between `-10` and `10`.
 
 ### Centering
-After some fantastic work from [@p-realinho](https://github.com/p-realinho), we just released the ability to center parallax elements in your viewport! We'll be building a nice demo website, but for now check out the tests folder for several examples of how it works.
 
 There's two ways to implement centering, either on specific elements or as a global option.
 ```html
@@ -142,14 +141,3 @@ If you're using Rellax in production, we'd love to list you here! Let us know: m
 - [The Rixey](http://www.livetherixey.com/)
 - [Laws of UX](https://lawsofux.com/)
 - [Deeson](https://www.deeson.co.uk/)
-
-Learn Rellax and other web animation skills with a course on [CSS Animation Rocks](http://courses.cssanimation.rocks/p/level-up)
-
-## Development
-In the spirit of lightweight javascript, the build processes (thus far) is lightweight also.
-
-1. Open demo.html
-2. Make code changes and refresh browser
-3. Once feature is finished or bug fixed, use [jshint](http://jshint.com/) to lint code
-4. Fix lint issues then use [Google Closure Compiler](https://closure-compiler.appspot.com/home) to minify
-5. 🍻
