@@ -23,14 +23,7 @@
 }(this, function(){
   "use strict";
 
-  // check what requestAnimationFrame to use, and if
-  // it's not supported, use the onscroll event
-  var loop = window.requestAnimationFrame ||
-             window.webkitRequestAnimationFrame ||
-             window.mozRequestAnimationFrame ||
-             window.msRequestAnimationFrame ||
-             window.oRequestAnimationFrame ||
-             function(callback){ setTimeout(callback, 1000 / 60); };
+  var _RAF = window.requestAnimationFrame || function(callback){ setTimeout(callback, 1000 / 60) };
 
   // check which transform property to use
   var transformProp = window.transformProp || (function(){
@@ -248,7 +241,7 @@
       }
 
       // loop again
-      loop(this.update.bind(this));
+      _RAF(this.update.bind(this));
     },
 
     // Transform3d on parallax element
