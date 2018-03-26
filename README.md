@@ -2,12 +2,10 @@
 
 Rellax is a buttery smooth, super lightweight (1021bytes gzipped), vanilla javascript parallax library. **Update:** Rellax now works on mobile (v1.0.0).
 
-* [Demo Website](https://dixonandmoe.com/rellax/)
+## [See Demos](https://yaireo.github.io/rellax/)
 
-Have any suggestions or feedback? Reach out [@dixonandmoe](https://twitter.com/dixonandmoe)
 
 ## Getting Started
-`npm install rellax --save` or if you're old school like us download and insert `rellax.min.js`
 
 ```html
 <div class="rellax">
@@ -128,7 +126,6 @@ var rellax = new Rellax(this.rellaxRef)
 ```
 
 ## In the Wild
-If you're using Rellax in production, we'd love to list you here! Let us know: moe@dixonandmoe.com
 - [Microsoft Fluent](https://fluent.microsoft.com/)
 - [Gucci Gift](http://gift.gucci.com/)
 - [Finch](https://finch.io/)
